@@ -1,5 +1,5 @@
 -- Gui to Lua
--- Version: 3.2
+-- Version: 3.6
 
 -- Instances:
 
@@ -19,7 +19,7 @@ local TextBox = Instance.new("TextBox")
 local UICorner_5 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 
---Properties:
+-- Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -107,19 +107,21 @@ ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(0.096778661, 0, 0.16483517, 0)
-ScrollingFrame.Size = UDim2.new(0, 122, 0, 115)
+ScrollingFrame.Position = UDim2.new(0.096778661, 0, 0.142857149, 0)
+ScrollingFrame.Size = UDim2.new(0, 122, 0, 119)
 ScrollingFrame.ZIndex = 3
+ScrollingFrame.AutomaticCanvasSize = Enum.AutomaticSize.XY
 ScrollingFrame.CanvasSize = UDim2.new(200, 0, 200, 0)
 ScrollingFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.ScrollBarThickness = 5
 
 TextBox.Parent = ScrollingFrame
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(-5.00288138e-07, 0, -0.000217338224, 0)
-TextBox.Size = UDim2.new(0, 119, 0, 115)
+TextBox.Position = UDim2.new(-5.00288138e-07, 0, 0, 0)
+TextBox.Size = UDim2.new(0, 122, 0, 118)
 TextBox.ZIndex = 3
 TextBox.ClearTextOnFocus = false
 TextBox.Font = Enum.Font.Arial
@@ -146,7 +148,7 @@ TextLabel.TextSize = 16.000
 
 -- Scripts:
 
-local function HECMQRT_fake_script() -- ScreenGui.Gui Close  
+local function RRMW_fake_script() -- ScreenGui.Gui Close  
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local button = script.Parent.Frame.DragFrame.Close
@@ -155,8 +157,8 @@ local function HECMQRT_fake_script() -- ScreenGui.Gui Close
 		script.Parent.Open.Visible = true
 	end)
 end
-coroutine.wrap(HECMQRT_fake_script)()
-local function VFMEA_fake_script() -- ScreenGui.Gui Open 
+coroutine.wrap(RRMW_fake_script)()
+local function SVVH_fake_script() -- ScreenGui.Gui Open 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local button = script.Parent.Open
@@ -165,8 +167,8 @@ local function VFMEA_fake_script() -- ScreenGui.Gui Open
 		button.Visible = false
 	end)
 end
-coroutine.wrap(VFMEA_fake_script)()
-local function MULMD_fake_script() -- DragFrame.Execute 
+coroutine.wrap(SVVH_fake_script)()
+local function WKMP_fake_script() -- DragFrame.Execute 
 	local script = Instance.new('LocalScript', DragFrame)
 
 	local button = script.Parent.Execute
@@ -176,8 +178,8 @@ local function MULMD_fake_script() -- DragFrame.Execute
 		assert(loadstring(script)())
 	end)
 end
-coroutine.wrap(MULMD_fake_script)()
-local function PFAE_fake_script() -- DragFrame.Clear 
+coroutine.wrap(WKMP_fake_script)()
+local function NRYRY_fake_script() -- DragFrame.Clear 
 	local script = Instance.new('LocalScript', DragFrame)
 
 	local button = script.Parent.Clear
@@ -186,8 +188,8 @@ local function PFAE_fake_script() -- DragFrame.Clear
 		textbox.Text = ""
 	end)
 end
-coroutine.wrap(PFAE_fake_script)()
-local function ELAEZ_fake_script() -- DragFrame.Dragging 
+coroutine.wrap(NRYRY_fake_script)()
+local function OPJY_fake_script() -- DragFrame.Dragging 
 	local script = Instance.new('LocalScript', DragFrame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -223,4 +225,4 @@ local function ELAEZ_fake_script() -- DragFrame.Dragging
 		end
 	end)
 end
-coroutine.wrap(ELAEZ_fake_script)()
+coroutine.wrap(OPJY_fake_script)()
