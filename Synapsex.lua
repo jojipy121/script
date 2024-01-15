@@ -16,8 +16,10 @@ local Execute = Instance.new("TextButton")
 local Attach = Instance.new("TextButton")
 local Clear = Instance.new("TextButton")
 local lol = Instance.new("TextButton")
-local Open = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
+local Frame1 = Instance.new("Frame")
+local DragFrame_2 = Instance.new("Frame")
+local Open = Instance.new("TextButton")
 
 -- Properties:
 
@@ -29,7 +31,7 @@ Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.246864021, 0, 0.239356413, 0)
-Frame.Size = UDim2.new(0, 392, 0, 218)
+Frame.Size = UDim2.new(0, 392, 0, 221)
 
 DragFrame.Name = "DragFrame"
 DragFrame.Parent = Frame
@@ -72,8 +74,8 @@ TextBox.Parent = ScrollingFrame
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.00079722004, 0, -2.07083576e-06, 0)
-TextBox.Size = UDim2.new(0, 369, 0, 138)
+TextBox.Position = UDim2.new(-0.000912343268, 0, -6.57217824e-05, 0)
+TextBox.Size = UDim2.new(0, 367, 0, 140)
 TextBox.Font = Enum.Font.SourceSans
 TextBox.MultiLine = true
 TextBox.Text = ""
@@ -136,39 +138,41 @@ lol.Text = "_"
 lol.TextColor3 = Color3.fromRGB(255, 255, 255)
 lol.TextSize = 30.000
 
+UICorner_3.CornerRadius = UDim.new(0, 9)
+UICorner_3.Parent = Frame
+
+Frame1.Name = "Frame1"
+Frame1.Parent = ScreenGui
+Frame1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame1.BorderSizePixel = 0
+Frame1.Position = UDim2.new(0, 0, 0.39438501, 0)
+Frame1.Size = UDim2.new(0, 44, 0, 17)
+Frame1.Visible = false
+
+DragFrame_2.Name = "DragFrame"
+DragFrame_2.Parent = Frame1
+DragFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DragFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DragFrame_2.BorderSizePixel = 0
+DragFrame_2.Position = UDim2.new(0, 0, -0.000438017014, 0)
+DragFrame_2.Size = UDim2.new(0, 44, 0, 17)
+
 Open.Name = "Open"
-Open.Parent = DragFrame
+Open.Parent = DragFrame_2
 Open.BackgroundColor3 = Color3.fromRGB(173, 255, 148)
 Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Open.BorderSizePixel = 0
-Open.Position = UDim2.new(0, 0, 0.480501384, 0)
+Open.Position = UDim2.new(0, 0, -0.0194979589, 0)
 Open.Size = UDim2.new(0, 44, 0, 22)
-Open.Visible = false
 Open.Font = Enum.Font.SourceSans
 Open.Text = "Open"
 Open.TextColor3 = Color3.fromRGB(0, 0, 0)
 Open.TextSize = 14.000
 
-UICorner_3.CornerRadius = UDim.new(0, 9)
-UICorner_3.Parent = Frame
-
 -- Scripts:
 
-local function WCHFLLM_fake_script() -- Close.LocalScript 
-	local script = Instance.new('LocalScript', Close)
-
-	print("Hello world!")
-	
-end
-coroutine.wrap(WCHFLLM_fake_script)()
-local function XNBUV_fake_script() -- Clear.LocalScript 
-	local script = Instance.new('LocalScript', Clear)
-
-	print("Hello world!")
-	
-end
-coroutine.wrap(XNBUV_fake_script)()
-local function JLETG_fake_script() -- DragFrame.Execute 
+local function IVLM_fake_script() -- DragFrame.Execute 
 	local script = Instance.new('LocalScript', DragFrame)
 
 	local button = script.Parent.Execute
@@ -178,8 +182,8 @@ local function JLETG_fake_script() -- DragFrame.Execute
 		assert(loadstring(script)())
 	end)
 end
-coroutine.wrap(JLETG_fake_script)()
-local function MTLS_fake_script() -- DragFrame.Clear 
+coroutine.wrap(IVLM_fake_script)()
+local function DDGKN_fake_script() -- DragFrame.Clear 
 	local script = Instance.new('LocalScript', DragFrame)
 
 	local button = script.Parent.Clear
@@ -188,8 +192,8 @@ local function MTLS_fake_script() -- DragFrame.Clear
 		textbox.Text = ""
 	end)
 end
-coroutine.wrap(MTLS_fake_script)()
-local function ZGCMHF_fake_script() -- DragFrame.Attach 
+coroutine.wrap(DDGKN_fake_script)()
+local function IVQDWB_fake_script() -- DragFrame.Attach 
 	local script = Instance.new('LocalScript', DragFrame)
 
 	local button = script.Parent.Attach
@@ -198,8 +202,8 @@ local function ZGCMHF_fake_script() -- DragFrame.Attach
 		print("How the fuck attach should work?")
 	end)
 end
-coroutine.wrap(ZGCMHF_fake_script)()
-local function OXCFV_fake_script() -- DragFrame.Drag 
+coroutine.wrap(IVQDWB_fake_script)()
+local function AZLMZ_fake_script() -- DragFrame.Drag 
 	local script = Instance.new('LocalScript', DragFrame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -235,8 +239,8 @@ local function OXCFV_fake_script() -- DragFrame.Drag
 		end
 	end)
 end
-coroutine.wrap(OXCFV_fake_script)()
-local function CLUSSGW_fake_script() -- ScreenGui.Destroy 
+coroutine.wrap(AZLMZ_fake_script)()
+local function HPPTRZB_fake_script() -- ScreenGui.Destroy 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local button = script.Parent.Frame.DragFrame.Close
@@ -245,26 +249,63 @@ local function CLUSSGW_fake_script() -- ScreenGui.Destroy
 		Frame:Destroy()
 	end)
 end
-coroutine.wrap(CLUSSGW_fake_script)()
-local function GXKV_fake_script() -- ScreenGui.Close 
+coroutine.wrap(HPPTRZB_fake_script)()
+local function ONMXZVT_fake_script() -- ScreenGui.Close 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local button = script.Parent.Frame.DragFrame.lol
 	local Frame = script.Parent.Frame
 	button.MouseButton1Click:Connect(function()
 		Frame.Visible = false
-		script.Parent.DragFrame1.Open.Visible = true
+		script.Parent.Frame1.Visible = true
 	end)
 end
-coroutine.wrap(GXKV_fake_script)()
-local function QSTAI_fake_script() -- ScreenGui.Open 
+coroutine.wrap(ONMXZVT_fake_script)()
+local function MXUSA_fake_script() -- ScreenGui.Open 
 	local script = Instance.new('LocalScript', ScreenGui)
 
-	local button = script.Parent.Open
+	local button = script.Parent.Frame1.DragFrame.Open
 	local Frame = script.Parent.Frame
 	button.MouseButton1Click:Connect(function()
 		script.Parent.Frame.Visible = true
-		script.Parent.Open.Visible = false
+		script.Parent.Frame1.Visible = false
 	end)
 end
-coroutine.wrap(QSTAI_fake_script)()
+coroutine.wrap(MXUSA_fake_script)()
+local function CYGMP_fake_script() -- DragFrame_2.LocalScript 
+	local script = Instance.new('LocalScript', DragFrame_2)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local MainFrame = script.Parent.Parent
+	local RepositioningFrame = script.Parent.Parent:WaitForChild("DragFrame")
+	
+	local Camera = workspace:WaitForChild("Camera")
+	
+	local DragMousePosition
+	local FramePosition
+	
+	local Draggable = false
+	
+	RepositioningFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			Draggable = true
+			DragMousePosition = Vector2.new(input.Position.X, input.Position.Y)
+			FramePosition = Vector2.new(MainFrame.Position.X.Scale, MainFrame.Position.Y.Scale)
+		end
+	end)
+	
+	RepositioningFrame.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			Draggable = false
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if Draggable == true then
+			local NewPosition = FramePosition + ((Vector2.new(input.Position.X, input.Position.Y) - DragMousePosition) / Camera.ViewportSize)
+			MainFrame.Position = UDim2.new(NewPosition.X, 0, NewPosition.Y, 0)
+		end
+	end)
+end
+coroutine.wrap(CYGMP_fake_script)()
